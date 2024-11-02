@@ -182,18 +182,24 @@
     margin-top: 8px;
 }
 
-
-/* Sobre nosotros */
-.head-about h2{
+.head-about {
     text-align: center;
-    font-size: 25px;
-    color:#FACC15;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
     margin-top: 50px;
 }
 
-.head-about h2::after{
+.head-about h2 {
+    font-size: 25px;
+    color: #FACC15;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: color 0.3s ease;
+}
+
+.head-about h2:hover {
+    color: #FFAA00; 
+}
+
+.head-about h2::after {
     content: "";
     height: 5px;
     width: 250px;
@@ -202,54 +208,55 @@
     display: block;
     margin: auto;
 }
-.container{
-    padding: 0px 60px;
+
+.container {
+    padding: 0 60px;
     margin: 60px auto;
-
-}
-
-.mision-content{
-    display: flex; 
+    display: flex;
+    flex-direction: column; 
     align-items: center; 
-    justify-content: space-between; 
-    padding: 50px;
-    background-color: #fff; 
 }
 
-.mision-content img {
-    width: 30; 
-    max-width: 70%; 
-    height: auto; 
-    margin-left: 200px; 
+.mision-content, .vision-content, .story-content {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    padding: 50px;
+    background-color: #fff;
+    margin-bottom: 20px; 
+    max-width: 900px; 
+    width: 100%;
 }
 
-.vision-content{
-    display: flex; 
-    align-items: center; 
-    justify-content: space-between; 
-    padding: 50px;
-    background-color: #fff; 
-}
-
-.vision-content img {
-    width: 30; 
-    max-width: 60%; 
-    height: auto; 
-}
-.story-content{
-    display: grid; 
-    align-items: center; 
-    justify-content: space-between; 
-    padding: 50px;
-    background-color: #fff; 
-}
-.story-content img {
-    width: 30; 
+.mision-content img, .vision-content img, .story-content img {
     max-width: 50%; 
-    height: auto; 
-    margin: 0 300px;
+    height: auto;
+    transition: transform 0.3s ease;
 }
 
-.story-content h2{
-    margin-left: 400px;
+.mision-content img:hover, .vision-content img:hover, .story-content img:hover {
+    transform: scale(1.05); 
+}
+
+.mision-text, .vision-text, .story-text {
+    flex: 1;
+    margin: 0 20px; 
+}
+
+.story-content {
+    flex-direction: column; 
+    align-items: center;
+}
+
+
+.story-content h2 {
+    margin-bottom: 20px; 
+}
+
+.story-content h2:hover, .vision-content h2:hover, .mision-content h2:hover {
+    color: #FFAA00; 
+}
+
+body {
+    font-family: 'Arial', sans-serif; 
 }
