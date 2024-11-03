@@ -16,6 +16,8 @@ export class LoginComponent {
    onSubmit(){
     if(this.email && this.password)
     {
+      console.log(this.email);
+      console.log(this.password);
       console.log('Inicio de sesion exitoso');
     }
    }
