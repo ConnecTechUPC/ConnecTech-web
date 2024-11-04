@@ -22,7 +22,6 @@
     border-radius: 5px;
 }
 
-
 /*Seccion de introduccion */
 .hero {
     display: flex; /* Usamos flexbox para alinear elementos */
@@ -229,9 +228,10 @@
 }
 
 .mision-content img, .vision-content img, .story-content img {
-    max-width: 50%; 
+    max-width: 60%; 
     height: auto;
     transition: transform 0.3s ease;
+    position: center;
 }
 
 .mision-content img:hover, .vision-content img:hover, .story-content img:hover {
