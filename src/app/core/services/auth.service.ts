@@ -10,8 +10,8 @@ export class AuthService {
   private users: User[] = [
     {
       id: 1,
-      firstName: 'Ximena',
-      lastName: 'Chavarria',
+      firstName: 'ElPepe',
+      lastName: 'EsoTilin',
       email: 'admin1@example.com',
       password: '1234567',
       role: 'ADMIN',
