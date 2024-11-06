@@ -70,7 +70,7 @@ export class LoginComponent {
         if (user.role === 'ADMIN') {
           this.router.navigate(['/admin/events']);
         } else if (user.role === 'CUSTOMER') {
-          this.router.navigate(['/customer/catalog']);
+          this.router.navigate(['/customer/catalog/event-detail']);
         }
       } else {
         this.showSnackBar('Correo o contraseña incorrectos.');
