@@ -7,6 +7,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { Router, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { AuthService } from '../../../core/services/auth.service';
+import { User } from '../../../shared/models/user.model';
 
 @Component({
   selector: 'app-register',
@@ -29,6 +31,7 @@ export class RegisterComponent {
   private fb = inject(FormBuilder);
   private snackBar = inject(MatSnackBar);
   private router= inject(Router);
+  private authService = inject(AuthService);
 
   constructor() {
 
@@ -48,7 +51,7 @@ export class RegisterComponent {
   }
 
 
-  private showSnackBar(message: string) {
+  showSnackBar(message: string) {
     this.snackBar.open(message, 'Cerrar', {
       duration: 3000,
       verticalPosition: 'bottom',
@@ -58,12 +61,23 @@ export class RegisterComponent {
 
 
   onSubmit() {
-    if (this.registerForm.valid) {
-      const user = this.registerForm.value;
+     if (this.registerForm.valid) {
+      const newUser: User = {
+        id: 0,
+        role: 'CUSTOMER',
+        ...this.registerForm.value,
+      };
 
-      console.log('Usuario registrado:', user);
-      this.showSnackBar('Registro exitoso');
-      this.router.navigate(['/auth/login']);
+      const registeredUser = this.authService.register(newUser);
+
+      if (registeredUser) {
+        this.showSnackBar(
+          `Registro exitoso, bienvenido ${registeredUser.firstName}`
+        );
+        this.router.navigate(['/auth/login']);
+      } else {
+        this.showSnackBar('Error al registrar el usuario');
+      }
     }
   }
 }

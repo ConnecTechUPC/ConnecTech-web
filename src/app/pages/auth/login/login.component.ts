@@ -11,7 +11,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
-import { RouterLink } from '@angular/router';
+import { RouterLink,Router } from '@angular/router';
+import { AuthService } from '../../../core/services/auth.service';
+import { LoginCredentials } from '../../../shared/models/login-credentials.model';
 
 @Component({
   selector: 'app-login',
@@ -32,6 +34,8 @@ export class LoginComponent {
   loginForm: FormGroup;
   private fb = inject(FormBuilder);
   private snackBar = inject(MatSnackBar);
+  private authService = inject(AuthService);
+  private router = inject(Router);
 
   constructor() {
     this.loginForm = this.fb.group({
@@ -44,7 +48,7 @@ export class LoginComponent {
       return this.loginForm.controls[control].hasError(error);
   }
 
-  private showSnackBar(message: string) {
+  showSnackBar(message: string) {
     this.snackBar.open(message, 'Cerrar', {
       duration: 3000,
       verticalPosition: 'bottom',
@@ -55,10 +59,22 @@ export class LoginComponent {
 
   onSubmit() {
     if (this.loginForm.valid) {
-      const user = this.loginForm.value;
+      const credentials: LoginCredentials = this.loginForm.value;
 
-      console.log('Usuario registrado:', user);
-      this.showSnackBar('Registro exitoso');
+      const user = this.authService.login(credentials);
+
+      if (user) {
+        this.showSnackBar(`Bienvenido, ${user.firstName}`);
+
+
+        if (user.role === 'ADMIN') {
+          this.router.navigate(['/admin/events']);
+        } else if (user.role === 'CUSTOMER') {
+          this.router.navigate(['/customer/catalog/event-detail']);
+        }
+      } else {
+        this.showSnackBar('Correo o contraseña incorrectos.');
+      }
     }
   }
 }
