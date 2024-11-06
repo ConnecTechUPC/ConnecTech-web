@@ -6,6 +6,8 @@
 }
 
 .hero h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
     font-size: 2.5em;
 }
 
@@ -21,6 +23,7 @@
     text-decoration: none;
     border-radius: 5px;
 }
+
 
 /*Seccion de introduccion */
 .hero {
@@ -46,6 +49,8 @@
 }
 
 .hero h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
     font-size: 2.5em;
     margin-bottom: 20px;
 }
@@ -72,6 +77,8 @@
 }
 
 .features h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
     font-size: 2em;
     margin-bottom: 40px;
 }
@@ -98,12 +105,20 @@
 /*FAQ*/
 /* Fondo degradado */
 .header-container {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
     background: linear-gradient(135deg, #F97316, #ffc107); 
     padding: 40px 0; 
     text-align: center; 
+    width: 100%;
+    position:relative;
+    margin-left: auto; /* Elimina el margen izquierdo */ 
+    margin-right:auto;
 }
 
 .header-container h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
     font-size: 2.5em;
     color: #333; 
     margin-bottom: 20px; 
@@ -163,6 +178,7 @@
 
 /* Estilos para las preguntas frecuentes */
 .faq-questions-container {
+    font-family: 'Inter', sans-serif;
     padding: 20px;
     width: 80%;
     margin: 0 auto;
@@ -173,7 +189,7 @@
 }
 
 .faq-question {
-    font-size: 1.2em;
+    font-size: 1.0em;
     font-weight: bold;
 }
 
@@ -209,11 +225,13 @@
 }
 
 .container {
-    padding: 0 60px;
+    font-family: 'Inter', sans-serif;
     margin: 60px auto;
     display: flex;
     flex-direction: column; 
     align-items: center; 
+    width: 100%;
+    
 }
 
 .mision-content, .vision-content, .story-content {
@@ -223,15 +241,14 @@
     padding: 50px;
     background-color: #fff;
     margin-bottom: 20px; 
-    max-width: 900px; 
+    max-width: 100%; 
     width: 100%;
 }
 
 .mision-content img, .vision-content img, .story-content img {
-    max-width: 60%; 
+    max-width: 50%; 
     height: auto;
     transition: transform 0.3s ease;
-    position: center;
 }
 
 .mision-content img:hover, .vision-content img:hover, .story-content img:hover {
@@ -258,5 +275,81 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif; 
+    font-family: 'Inter', sans-serif;
+}
+
+.faq-item {
+    font-size: 1.0em;
+    margin-bottom: 20px;
+    padding-top: 30px;
+}
+
+.faq-question {
+    font-size: 1.2em;
+    color: #333;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.faq-answer {
+    padding-left: 20px;
+    color: #555;
+    display: none; 
+}
+
+.faq-answer.ng-star-inserted {
+    display: block; 
+}
+
+.team-section {
+    text-align: center;
+    padding: 50px;
+    background-color: #F9F9F9;
+}
+
+.team-section h3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.team-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.team-member {
+    text-align: center;
+    width: 175px;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.team-member img:hover {
+    transform: scale(1.1);
+}
+
+.team-member h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2em;
+    margin-top: 15px;
+    color: #333;
+}
+
+.team-member p {
+    font-size: 1em;
+    color: #666;
 }
