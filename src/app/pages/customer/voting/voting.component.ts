@@ -22,6 +22,7 @@ export class VotingComponent  {
     { texto: 'Excelente evento, aprendí mucho sobre desarrollo web.', autor: 'Juan Pérez', calificacion: 5 },
     { texto: 'Muy buen taller, los ponentes fueron claros y atentos.', autor: 'María González', calificacion: 4 },
     { texto: 'Me gustó el taller, aunque hubiera preferido más práctica.', autor: 'Luis Martínez', calificacion: 3 },
+    // Agrega más testimonios aquí según sea necesario
   ];
 
   nextSlide() {
