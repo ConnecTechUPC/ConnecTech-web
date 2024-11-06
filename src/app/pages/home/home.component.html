@@ -1,3 +1,4 @@
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 <app-navbar-home/>
     <link rel="stylesheet" href="home.component.css" />
 <div class="container mt-4">
@@ -53,6 +54,10 @@
             
             </div>
         </section>
+
+
+
+        
         <!-- Sección de características -->
         <section class="features">
             <h2>Características Clave</h2>
@@ -109,45 +114,45 @@
                     <h3>Sobre eventos online</h3>
                 </div>
             </div>
-    
             <div class="faq-questions-container">
-                <div class="faq-item">
-                    <h3 class="faq-question">¿Cómo me registro en la plataforma?</h3>
-                    <p class="faq-answer">Para registrarte, haz clic en "Registrarse" en la parte superior y completa el formulario.</p>
-                </div>
-                
-                <div class="faq-item">
-                    <h3 class="faq-question">¿Cuáles son los métodos de pago disponibles?</h3>
-                    <p class="faq-answer">Aceptamos pagos con tarjeta de crédito, débito, Yape, Plin.</p>
-                </div>
-                
-                <div class="faq-item">
-                    <h3 class="faq-question">¿Qué tipo de eventos tecnológicos organiza la plataforma?</h3>
-                    <p class="faq-answer">La plataforma organiza conferencias, talleres, hackatones enfocadas en innovación y desarrollo tecnológico.</p>
-                </div>
-    
-                <div class="faq-item">
-                    <h3 class="faq-question">¿Cómo se seleccionan los ponentes para los eventos?</h3>
-                    <p class="faq-answer">Los ponentes son seleccionados en función de su experiencia en la industria, sus contribuciones al campo y su capacidad para ofrecer contenido relevante y atractivo.</p>
-                </div>
-    
-                <div class="faq-item">
-                    <h3 class="faq-question">¿La plataforma ofrece oportunidades de networking durante los eventos?</h3>
-                    <p class="faq-answer">Sí, se facilitan sesiones de networking y espacios virtuales donde los asistentes pueden conectarse, intercambiar ideas y crear colaboraciones.</p>
-                </div>
-    
-                <div class="faq-item">
-                    <h3 class="faq-question">¿Existen descuentos para grupos o estudiantes?</h3>
-                    <p class="faq-answer">Sí, ofrecemos descuentos especiales para grupos y estudiantes; puedes consultar la sección de precios en la página de cada evento para más detalles.</p>
-                </div>
-    
+                <div *ngFor="let faq of faqs" class="faq-item">
+                    <h5 (click)="toggleAnswer(faq)">{{ faq.question }}</h5>
+                    <p *ngIf="faq.showAnswer">{{ faq.answer }}</p>
+                  </div>
             </div>
         </section>
-    
-      
-        <!-- Aquí va la sección de preguntas -->
         
         <!-- Sección de equipo -->
+        <div class="team-section">
+            <h3>Conoce a Nuestro Equipo</h3>
+            <div class="team-container">
+                <div class="team-member">
+                    <img src="icons/img3.png" alt="Miembro del equipo">
+                    <h3>Dayana Gomez</h3>
+                    <p>Fundador</p>
+                </div>
+                <div class="team-member">
+                    <img src="icons/img1.png" alt="Miembro del equipo">
+                    <h3>Ximena Chavarria</h3>
+                    <p>Fundador</p>
+                </div>
+                <div class="team-member">
+                    <img src="icons/img2.png" alt="Miembro del equipo">
+                    <h3>Joaquin Arevalo</h3>
+                    <p>Fundador</p>
+                </div>
+                <div class="team-member">
+                    <img src="icons/img5.png" alt="Miembro del equipo">
+                    <h3>Nicole Vasquez</h3>
+                    <p>Fundador</p>
+                </div>
+                <div class="team-member">
+                    <img src="icons/img4.png" alt="Miembro del equipo">
+                    <h3>Shirley Huaringa</h3>
+                    <p>Fundador</p>
+                </div>
+            </div>
+        </div>
         
     </main>
 </div>
