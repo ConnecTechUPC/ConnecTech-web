@@ -1,0 +1,83 @@
+/* Contenedor principal */
+.event-list-container {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #fefae0; /* Fondo suave amarillo */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Título */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #ff8c00; /* Naranja vibrante */
+}
+
+/* Barra de búsqueda */
+.search-bar {
+    width: 100%;
+    margin-bottom: 20px;
+    
+}
+
+/* Botón de acción */
+.action-buttons {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+button {
+    margin-right: 8px;
+    background-color: #ff8c00 !important; /* Naranja vibrante */
+    color: #fff !important;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e67e00 !important; /* Naranja más oscuro al pasar el cursor */
+}
+
+/* Estilos de tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff; /* Fondo blanco para contraste */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Sombra ligera */
+}
+
+/* Cabecera de la tabla */
+th {
+    background-color: #0077b6; /* Azul para cabecera */
+    color: #000000;
+    padding: 12px;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Celdas de la tabla */
+td {
+    padding: 12px;
+    color: #333333; /* Texto oscuro */
+}
+
+/* Estilos de filas alternadas */
+tr:nth-child(even) {
+    background-color: #f0f4f8; /* Azul claro para filas alternadas */
+}
+
+tr:nth-child(odd) {
+    background-color: #fae6b1; /* Amarillo claro para filas alternadas */
+}
+
+/* Desactivar el efecto hover */
+tr:hover {
+    background-color: inherit !important;
+}
