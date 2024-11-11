@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 
 export class EventDetailComponent {
   event = {
-    id: '123', // Ejemplo de un evento
+    id: 'Taller', // Ejemplo de un evento
     name: 'Nombre del Evento',
     description: 'Descripción del evento...'
   };

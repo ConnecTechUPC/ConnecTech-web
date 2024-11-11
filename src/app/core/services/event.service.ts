@@ -82,4 +82,12 @@ export class EventService {
     }
     return false;
   }
+
+
+@Injectable({
+  providedIn: 'root'
+})
+export class EventService {
+
+  constructor() { }
 }
