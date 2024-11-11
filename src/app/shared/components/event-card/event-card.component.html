@@ -1,0 +1,20 @@
+<div class="event-card-container">
+    <ng-container *ngFor="let event of events">
+        <mat-card class="event-card">
+            <mat-card-header>
+                <mat-card-title>{{ event.name }}</mat-card-title> <!-- Aquí cambiamos `event.name` para mostrar el nombre del evento -->
+                <mat-card-subtitle>{{ event.ponente }}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <p class="event-name">{{ event.name }}</p> <!-- Usamos `event.location` para la ubicación del evento -->
+                <p class="event-hour">Hora: {{ event.hour }}</p> <!-- `event.hour` para mostrar la hora -->
+                <p class="event-ponente">Ponente: {{ event.ponente}}</p> <!-- `event.day` para la fecha -->
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-button color="primary" [routerLink]="['/customer/catalog/event/details', event.id]">Ver Detalles</button>
+                <button mat-button color="accent">Agregar al Carrito</button>
+            </mat-card-actions>
+        </mat-card>
+    </ng-container>
+    <p *ngIf="events.length === 0">No hay eventos disponibles</p>
+</div>

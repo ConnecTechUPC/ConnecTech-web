@@ -1,1 +1,60 @@
-<p>event-form works!</p>
+<div class="event-form-container">
+  <h2>Agregar Evento Nuevo</h2>
+
+  <form [formGroup]="eventForm" (ngSubmit)="onSubmit()">
+    <mat-card>
+      <mat-form-field appearance="fill" class="form-field">
+        <mat-label>Título</mat-label>
+        <input
+          matInput
+          formControlName="name"
+          placeholder="Ingrese el título del evento"
+        />
+        <mat-error *ngIf="controlHasError('name', 'required')">Título es requerido</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="form-field">
+        <mat-label>Ponente</mat-label>
+        <input
+          matInput
+          formControlName="ponente"
+          placeholder="Ingrese el ponente del evento"
+        />
+        <mat-error *ngIf="controlHasError('ponente', 'required')">Ponente es requerido</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="form-field">
+        <mat-label>Día del Evento</mat-label>
+        <input
+          matInput
+          type="date"
+          formControlName="day"
+        />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="form-field">
+        <mat-label>Hora del Evento</mat-label>
+        <input
+          matInput
+          type="time"
+          formControlName="hour"
+          placeholder="Ingrese la hora del evento"
+        />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="form-field">
+        <mat-label>Ubicación</mat-label>
+        <input
+          matInput
+          formControlName="location"
+          placeholder="Ingrese la ubicación del evento"
+        />
+      </mat-form-field>
+
+      <div class="button-group">
+        <button mat-raised-button color="primary" type="submit">Guardar</button>
+        <button mat-button color="warn" type="button" (click)="cancel()">Cancelar</button>
+      </div>
+    </mat-card>
+  </form>
+</div>

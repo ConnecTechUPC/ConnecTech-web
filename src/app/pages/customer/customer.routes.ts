@@ -10,12 +10,20 @@ export const customerRoutes: Routes = [
     {
         path: '',
         component: CustomerLayoutComponent,
+
+        children:[
+            {path: 'catalog', component: EventCatalogComponent},
+            {path: 'catalog/:id', component: EventDetailComponent},
+            {path: 'inscribe', component: InscribeFormComponent},
+            
+
         children: [
             { path: 'catalog', component: EventCatalogComponent },
             { path: 'catalog/:id', component: EventDetailFreeComponent },
             { path: 'catalog/:id', component: EventDetailComponent },
             { path: 'inscribe', component: InscribeFormComponent },
             { path: 'voting/:id', component: VotingComponent } // Ruta para la página de votación
+
         ]
     }
 ];

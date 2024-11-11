@@ -1,0 +1,90 @@
+.event-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px; /* Espacio más grande entre las tarjetas */
+    justify-content: center;
+    padding: 20px;
+}
+
+.event-card {
+    width: 280px;
+    margin: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px; /* Bordes redondeados más suaves */
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+    overflow: hidden; /* Asegura que el contenido no sobresalga de los bordes */
+    padding: 16px; /* Espaciado interno más grande */
+    opacity: 0.95; /* Ligera opacidad para las tarjetas */
+}
+
+/* Efecto de hover mejorado para las tarjetas */
+.event-card:hover {
+    transform: translateY(-10px); /* Desplazamiento hacia arriba más pronunciado */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2); /* Sombra más profunda */
+    opacity: 1; /* Restaura opacidad al pasar el ratón */
+}
+
+/* Estilo para el título del evento */
+.event-card-header {
+    margin-bottom: 12px; /* Espaciado debajo del header */
+}
+
+.event-card-title {
+    font-size: 1.2rem; /* Tamaño de fuente más grande para el nombre */
+    font-weight: bold; /* Título en negrita */
+    color: #333; /* Color oscuro para el título */
+    margin-bottom: 4px;
+}
+
+.event-card-subtitle {
+    font-size: 1rem; /* Tamaño de fuente para el ponente */
+    color: #666; /* Gris para el subtítulo */
+}
+
+/* Estilo para la información del evento */
+.event-name, .event-hour, .event-ponente {
+    color: #444; /* Gris oscuro para el texto */
+    font-size: 1rem;
+    margin: 6px 0;
+}
+
+.event-hour {
+    font-weight: bold; /* Hora en negrita para destacarla */
+    color: #008CBA; /* Color azul para la hora */
+}
+
+/* Estilo para las acciones del evento */
+mat-card-actions {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 12px;
+}
+
+mat-card-actions button {
+    border-radius: 4px;
+    padding: 8px 16px;
+}
+
+/* Color para los botones */
+button[mat-button].primary {
+    background-color: #008CBA; /* Azul para el botón de "Ver Detalles" */
+    color: red;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+button[mat-button].primary:hover {
+    background-color: #007B9A; /* Efecto hover para el botón */
+}
+
+button[mat-button].accent {
+    background-color: #F1C232; /* Color para el botón "Agregar al Carrito" */
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+button[mat-button].accent:hover {
+    background-color: #E1B229; /* Efecto hover para el botón */
+}

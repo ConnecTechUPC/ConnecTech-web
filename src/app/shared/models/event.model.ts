@@ -1,5 +1,3 @@
-import { Category } from "./category.model";
-
 export interface Event{
     id: number;
     name: string;
@@ -7,6 +5,4 @@ export interface Event{
     day: string;
     hour: string;
     location: string;
-    category: Category;
-    sumary: string;
 }
