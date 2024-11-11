@@ -11,7 +11,6 @@ export const customerRoutes: Routes = [
         children:[
             {path: 'catalog', component: EventCatalogComponent},
             {path: 'catalog/:id', component: EventDetailComponent},
-            {path: 'catalog', component: EventCatalogComponent},
             {path: 'inscribe', component: InscribeFormComponent},
             
         ]

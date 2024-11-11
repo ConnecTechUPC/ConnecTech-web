@@ -1,1 +1,9 @@
-<p>event-catalog works!</p>
+<div class="event-catalog-container">
+    <h2>Catálogo de Eventos</h2>
+  
+    <div class="search-box">
+      <input type="text" [(ngModel)]="searchQuery" (input)="filterEvents()" placeholder="Buscar por título o categoría" />
+    </div>
+  
+    <app-event-card [events]="filteredEvents"></app-event-card>
+</div>
