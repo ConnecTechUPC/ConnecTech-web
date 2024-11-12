@@ -2,17 +2,17 @@
 
 <div class="container">
     <h1 class="event-title">Taller Front-end Developer</h1>
-    
+
     <div class="event-description-container">
         <p class="event-description">
-            ¡Descubre el poder del desarrollo web con nuestro Taller de Front-End! 
+            ¡Descubre el poder del desarrollo web con nuestro Taller de Front-End!
             <br>
             Lo que nos diferencia es nuestro enfoque práctico: no solo aprenderás teoría, sino que pondrás manos a la obra con proyectos
-            reales que te prepararán para el mundo laboral. Además, contarás con el apoyo de instructores expertos, siempre listos para 
+            reales que te prepararán para el mundo laboral. Además, contarás con el apoyo de instructores expertos, siempre listos para
             guiarte y responder tus dudas.
             <br>
             Al finalizar el taller, no solo habrás creado tu propio portafolio de proyectos, sino que también tendrás la confianza y las
-            habilidades para afrontar cualquier desafío en el ámbito del desarrollo web. 
+            habilidades para afrontar cualquier desafío en el ámbito del desarrollo web.
             <br>
             ¡No te pierdas esta oportunidad de impulsar tu carrera y convertirte en un desarrollador front-end altamente demandado!</p>
         <img src="icons/taller.jpg" alt="Imagen del evento" class="event-image">
@@ -32,32 +32,39 @@
         </div>
     </div>
 
+    <h2>Agenda</h2>
+      <ul class="agenda-list">
+          <li>10:00 - 11:00: Lorem ipsum dolor sit amet, consectetur.</li>
+          <li>11:00 - 12:00: Excepteur sint occaecat cupidatat non proident.</li>
+          <li>12:00 - 1:00: sunt in culpa qui officia deserunt mollit anim id.</li>
+      </ul>
+
     <h2>Calificación</h2>
     <div class="estrellas" id="calificacion">
-        <span class="estrella" 
-              [ngStyle]="{'color': calificacion >= 1 ? 'gold' : 'gray'}" 
-              (mouseover)="cambiarColor(1)" 
-              (mouseout)="cambiarColor(calificacion)" 
+        <span class="estrella"
+              [ngStyle]="{'color': calificacion >= 1 ? 'gold' : 'gray'}"
+              (mouseover)="cambiarColor(1)"
+              (mouseout)="cambiarColor(calificacion)"
               (click)="seleccionarCalificacion(1)" data-value="1">★</span>
-        <span class="estrella" 
-              [ngStyle]="{'color': calificacion >= 2 ? 'gold' : 'gray'}" 
-              (mouseover)="cambiarColor(2)" 
-              (mouseout)="cambiarColor(calificacion)" 
+        <span class="estrella"
+              [ngStyle]="{'color': calificacion >= 2 ? 'gold' : 'gray'}"
+              (mouseover)="cambiarColor(2)"
+              (mouseout)="cambiarColor(calificacion)"
               (click)="seleccionarCalificacion(2)" data-value="2">★</span>
-        <span class="estrella" 
-              [ngStyle]="{'color': calificacion >= 3 ? 'gold' : 'gray'}" 
-              (mouseover)="cambiarColor(3)" 
-              (mouseout)="cambiarColor(calificacion)" 
+        <span class="estrella"
+              [ngStyle]="{'color': calificacion >= 3 ? 'gold' : 'gray'}"
+              (mouseover)="cambiarColor(3)"
+              (mouseout)="cambiarColor(calificacion)"
               (click)="seleccionarCalificacion(3)" data-value="3">★</span>
-        <span class="estrella" 
-              [ngStyle]="{'color': calificacion >= 4 ? 'gold' : 'gray'}" 
-              (mouseover)="cambiarColor(4)" 
-              (mouseout)="cambiarColor(calificacion)" 
+        <span class="estrella"
+              [ngStyle]="{'color': calificacion >= 4 ? 'gold' : 'gray'}"
+              (mouseover)="cambiarColor(4)"
+              (mouseout)="cambiarColor(calificacion)"
               (click)="seleccionarCalificacion(4)" data-value="4">★</span>
-        <span class="estrella" 
-              [ngStyle]="{'color': calificacion >= 5 ? 'gold' : 'gray'}" 
-              (mouseover)="cambiarColor(5)" 
-              (mouseout)="cambiarColor(calificacion)" 
+        <span class="estrella"
+              [ngStyle]="{'color': calificacion >= 5 ? 'gold' : 'gray'}"
+              (mouseover)="cambiarColor(5)"
+              (mouseout)="cambiarColor(calificacion)"
               (click)="seleccionarCalificacion(5)" data-value="5">★</span>
     </div>
 
@@ -69,13 +76,13 @@
     </div>
       <div class="testimonials-section">
         <h2>Testimonios</h2>
-        
+
         <div class="testimonial-carousel">
           <button class="prev-btn" (click)="prevSlide()">&#10094;</button>
-      
+
           <!-- Recorrer testimonios con *ngFor -->
-          <div 
-            *ngFor="let testimonial of testimonios; let i = index" 
+          <div
+            *ngFor="let testimonial of testimonios; let i = index"
             class="testimonial-slide"
             [class.active]="i === currentIndex">
             <p>{{ testimonial.texto }}</p>
@@ -84,7 +91,7 @@
               <span *ngFor="let star of [].constructor(testimonial.calificacion)">&#9733;</span>
             </div>
           </div>
-      
+
           <button class="next-btn" (click)="nextSlide()">&#10095;</button>
         </div>
       </div>
