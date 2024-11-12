@@ -10,7 +10,7 @@ export const customerRoutes: Routes = [
         component: CustomerLayoutComponent,
         children:[
             {path: 'catalog', component: EventCatalogComponent},
-            {path: 'catalog/:id', component: EventDetailComponent},
+            {path: 'catalog/event/details/:id', component: EventDetailComponent},
             {path: 'inscribe', component: InscribeFormComponent},
             
         ]

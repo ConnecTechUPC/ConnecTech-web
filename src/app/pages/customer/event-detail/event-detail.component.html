@@ -1,1 +1,18 @@
-<p>event-detail works!</p>
+@if(event){
+    <div class="event-detail">
+      <h2>{{ event.name }}</h2> <!-- Mostrar el nombre del evento -->
+      <p><strong>Ponente:</strong> {{ event.ponente }}</p> <!-- Mostrar el ponente -->
+      <p><strong>Hora:</strong> {{ event.hour }}</p> <!-- Mostrar la hora -->
+      <p><strong>Ubicación:</strong> {{ event.location }}</p> <!-- Mostrar la ubicación -->
+      
+    
+      <button mat-raised-button color="primary" (click)="goBack()">
+        Regresar al Catálogo
+      </button>
+    </div>
+  } @else {
+    <div class="event-detail">
+      <p>Seleccione un evento para ver los detalles</p>
+    </div>
+  }
+  
