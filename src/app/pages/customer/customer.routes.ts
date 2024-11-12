@@ -4,7 +4,7 @@ import { EventCatalogComponent } from './event-catalog/event-catalog.component';
 import { EventDetailComponent } from './event-detail/event-detail.component';
 import { InscribeFormComponent } from './inscribe-form/inscribe-form.component';
 import { VotingComponent } from './voting/voting.component'; // Agrega esta ruta de votacion
-
+import{RegisteredComponent} from  './registered/registered.component';
 export const customerRoutes: Routes = [
     {
         path: '',
@@ -13,7 +13,8 @@ export const customerRoutes: Routes = [
             { path: 'catalog', component: EventCatalogComponent },
             { path: 'catalog/:id', component: EventDetailComponent },
             { path: 'inscribe', component: InscribeFormComponent },
-            { path: 'voting/:id', component: VotingComponent } // Ruta para la página de votación
+            { path: 'voting/:id', component: VotingComponent }, // Ruta para la página de votación
+            {path:'registered',component:RegisteredComponent}
         ]
     }
 ];

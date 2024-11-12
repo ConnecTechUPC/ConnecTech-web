@@ -1,12 +1,12 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { VotingComponent } from './pages/customer/voting/voting.component';
-
+import { RegisteredComponent } from './pages/customer/registered/registered.component';
 export const routes: Routes = [
     {
         path: '',
-        component: HomeComponent,    
-        
+        component: HomeComponent,
+
     },
     {
         path: 'admin',
@@ -21,7 +21,7 @@ export const routes: Routes = [
         loadChildren: () =>import('./pages/auth/auth.routes'). then(m=>m.authRoutes),
     },
     {
-        path: 'voting/:id', 
+        path: 'voting/:id',
         component: VotingComponent,
     },
     {

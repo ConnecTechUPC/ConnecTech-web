@@ -1,6 +1,9 @@
+import { RegisteredComponent } from './../../../pages/customer/registered/registered.component';
 import { Component, inject } from '@angular/core';
 import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { AuthService } from '../../../core/services/auth.service';
+import { formatCurrency } from '@angular/common';
+
 
 @Component({
   selector: 'app-navbar-customer',

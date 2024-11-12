@@ -1,0 +1,86 @@
+.container {
+  display: flex;
+  justify-content: center; /* Centra las imágenes horizontalmente */
+  align-items: flex-start; /* Centra las imágenes verticalmente */
+  padding: 0;
+
+  margin: 120px;
+  gap: 20px; /* Espacio entre las imágenes */
+  position: relative;
+}
+
+.event-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 2.5em;
+  margin: 0;
+  position: absolute;
+  top: 90px; /* Ajusta según sea necesario */
+  left: 100px;
+}
+
+h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.8em;
+  color: #007BFF;
+  margin: 0;
+  position: absolute;
+  top: 160px; /* Ajusta según sea necesario */
+  left: 100px;
+}
+
+.speaker-image {
+  width: 400px;
+  height: 190px;
+  object-fit: cover;
+}
+.speaker-name {
+  grid-column: 1 / -1; /* El nombre ocupa ambas columnas */
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.speaker-specialty {
+  grid-column: 1; /* Coloca la fecha en la primera columna */
+}
+
+.speaker-specialtyy {
+  grid-column: 1 / -1; /* "Virtual" ocupa ambas columnas y está debajo de la fecha */
+}
+
+.speaker-specialtyyY {
+  grid-column: 2; /* Coloca la hora en la segunda columna, al lado de la fecha */
+}
+
+.speaker-specialtyyYY {
+  grid-column: 2; /* "Inscritos" debajo de la hora en la segunda columna */
+}
+img[alt="fcha"] {
+  width: 60px; /* Ajusta el tamaño */
+  height: 60px;
+  grid-column: 1; /* Coloca en la primera columna */
+  align-self: center;
+  margin-right: 5px;
+}
+img[alt="fchaa"] {
+  width: 60px; /* Ajusta el tamaño */
+  height: 60px;
+  grid-column: 1; /* Coloca en la primera columna */
+  align-self: center;
+  margin-right: 5px;
+}
+img[alt="fchaaa"] {
+  width: 60px; /* Ajusta el tamaño */
+  height: 60px;
+  grid-column: 1; /* Coloca en la primera columna */
+  align-self: center;
+  margin-right: 5px;
+}
+img[alt="fchaaaa"] {
+  width: 60px; /* Ajusta el tamaño */
+  height: 60px;
+  grid-column: 1; /* Coloca en la primera columna */
+  align-self: center;
+  margin-right: 5px;
+}
+
