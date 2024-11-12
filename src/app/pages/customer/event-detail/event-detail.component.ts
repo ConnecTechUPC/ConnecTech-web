@@ -30,4 +30,11 @@ export class EventDetailComponent implements OnInit {
   goBack(): void {
     this.router.navigate(['/customer/catalog']);
   }
+  inscPagar(): void {
+    this.router.navigate(['/customer/inscribe-form']);
+  }
+  votar(): void {
+    this.router.navigate(['/customer/voting']);
+  }
+
 }
