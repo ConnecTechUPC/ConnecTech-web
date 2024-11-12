@@ -1,24 +1,40 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit, inject } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+
+import { CommonModule } from '@angular/common';
+import { Event } from '../../../shared/models/event.model';
+import { EventService } from '../../../core/services/event.service';
+
 
 @Component({
   selector: 'app-event-detail',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './event-detail.component.html',
-  styleUrl: './event-detail.component.css'
+  styleUrls: ['./event-detail.component.css'],
 })
+export class EventDetailComponent implements OnInit {
+  event: Event | null = null;
+  private route = inject(ActivatedRoute);
+  private eventService = inject(EventService);
+  private router = inject(Router);
 
-export class EventDetailComponent {
-  event = {
-    id: 'Taller', // Ejemplo de un evento
-    name: 'Nombre del Evento',
-    description: 'Descripción del evento...'
-  };
+  ngOnInit(): void {
+    const eventID = Number(this.route.snapshot.paramMap.get('id'));
 
-  constructor(private router: Router) {}
-
-  irAVotacion(eventId: string) {
-      this.router.navigate(['/voting', eventId]);
+    if (eventID) {
+      this.event = this.eventService.getEventID(eventID);
+    }
   }
+
+  goBack(): void {
+    this.router.navigate(['/customer/catalog']);
+  }
+  inscPagar(): void {
+    this.router.navigate(['/customer/inscribe-form']);
+  }
+  votar(): void {
+    this.router.navigate(['/customer/voting']);
+  }
+
 }

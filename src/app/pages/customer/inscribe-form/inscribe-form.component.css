@@ -1,0 +1,50 @@
+/* Estilo para el título del mensaje de bienvenida */
+.welcome-message h1 {
+    color: #005dfd;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* Estilo para el párrafo del mensaje de bienvenida */
+.welcome-message p {
+    color: #555;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    text-align: center;
+}
+  
+.payment-form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-field {
+  margin-bottom: 16px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.submit-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+mat-form-field {
+  display: block;
+}
+
+button {
+    border-radius: 20px;
+    padding: 8px 16px;
+    background-color: #F1C232;
+}
