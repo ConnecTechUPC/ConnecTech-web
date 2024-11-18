@@ -1,0 +1,356 @@
+
+
+.hero {
+    text-align: center;
+    padding: 50px;
+    background-color: white;
+}
+
+.hero h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: 2.5em;
+}
+
+.hero p {
+    margin: 20px 0;
+    font-size: 1.2em;
+}
+
+.btn-explorar {
+    padding: 15px 30px;
+    background-color: #F97316;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
+/*Seccion de introduccion */
+.hero {
+    display: flex; /* Usamos flexbox para alinear elementos */
+    align-items: center; /* Centra verticalmente la imagen y el contenido */
+    justify-content: space-between; /* Separa los elementos: imagen a la izquierda, contenido a la derecha */
+    padding: 50px;
+    background-color: #fff; /* Color de fondo */
+}
+
+.hero img {
+    width: 30; /* Ajusta el tamaño de la imagen (puedes cambiarlo según sea necesario) */
+    max-width: 100%; /* Asegúrate de que no se desborde */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-right: 200px; /* Espacio entre la imagen y el contenido */
+}
+.hero { /*centrar el contenido */
+    justify-content: center;
+}
+
+.hero-content {
+    max-width: 50%; /* Controla el ancho del contenido para que no sea demasiado ancho */
+}
+
+.hero h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.btn-explorar {
+    padding: 15px 30px;
+    background-color: #ff6b6b;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/*caracteristicas*/
+.features {
+    padding: 50px;
+    background-color: #FACC15; /* Color de fondo de la sección de características */
+    text-align: center;
+    margin-bottom: 50px; /* Margen inferior para separar de la siguiente sección */
+}
+
+.features h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+
+.feature-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.feature {
+    background-color: #e0f7fa; /* Cambia este color por el que desees */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    width: 30%; /* Ancho del recuadro */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.feature img {
+    max-width: 100%; /* Asegura que la imagen no se salga del recuadro */
+    border-radius: 5px; /* Bordes redondeados para las imágenes */
+    margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+}   
+
+/*FAQ*/
+/* Fondo degradado */
+.header-container {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    background: linear-gradient(135deg, #F97316, #ffc107); 
+    padding: 40px 0; 
+    text-align: center; 
+    width: 100%;
+    position:relative;
+    margin-left: auto; /* Elimina el margen izquierdo */ 
+    margin-right:auto;
+}
+
+.header-container h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: 2.5em;
+    color: #333; 
+    margin-bottom: 20px; 
+}
+
+/* Barra de búsqueda */
+.faq-search {
+    width: 50%;
+    padding: 15px;
+    font-size: 1.2em;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.faq-search {
+    display: block;
+    margin: 20px auto;
+    width: 70%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+/* Contenedor de las opciones de FAQ */
+.faq-options-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 70px; 
+    width: 70%; 
+    margin: 0 auto; 
+    padding: 30px;
+    cursor: pointer;
+}
+
+/* Estilos de cada cuadro */
+.faq-option {
+    background-color: #ffc107;
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.faq-option:hover {
+    transform: scale(1.05);
+}
+
+.faq-option img {
+    max-width: 60px; 
+    margin-bottom: 10px;
+}
+
+.faq-option h3 {
+    font-size: 1.2em; 
+}
+
+/* Estilos para las preguntas frecuentes */
+.faq-questions-container {
+    font-family: 'Inter', sans-serif;
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-question {
+    font-size: 1.0em;
+    font-weight: bold;
+}
+
+.faq-answer {
+    margin-top: 8px;
+}
+
+.head-about {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.head-about h2 {
+    font-size: 25px;
+    color: #FACC15;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: color 0.3s ease;
+}
+
+.head-about h2:hover {
+    color: #FFAA00; 
+}
+
+.head-about h2::after {
+    content: "";
+    height: 5px;
+    width: 250px;
+    background-color: #FACC15;
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+}
+
+.container {
+    font-family: 'Inter', sans-serif;
+    margin: 60px auto;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    width: 100%;
+    
+}
+
+.mision-content, .vision-content, .story-content {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    padding: 50px;
+    background-color: #fff;
+    margin-bottom: 20px; 
+    max-width: 100%; 
+    width: 100%;
+}
+
+.mision-content img, .vision-content img, .story-content img {
+    max-width: 50%; 
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.mision-content img:hover, .vision-content img:hover, .story-content img:hover {
+    transform: scale(1.05); 
+}
+
+.mision-text, .vision-text, .story-text {
+    flex: 1;
+    margin: 0 20px; 
+}
+
+.story-content {
+    flex-direction: column; 
+    align-items: center;
+}
+
+
+.story-content h2 {
+    margin-bottom: 20px; 
+}
+
+.story-content h2:hover, .vision-content h2:hover, .mision-content h2:hover {
+    color: #FFAA00; 
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.faq-item {
+    font-size: 1.0em;
+    margin-bottom: 20px;
+    padding-top: 30px;
+}
+
+.faq-question {
+    font-size: 1.2em;
+    color: #333;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.faq-answer {
+    padding-left: 20px;
+    color: #555;
+    display: none; 
+}
+
+.faq-answer.ng-star-inserted {
+    display: block; 
+}
+
+.team-section {
+    text-align: center;
+    padding: 50px;
+    background-color: #F9F9F9;
+}
+
+.team-section h3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.team-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.team-member {
+    text-align: center;
+    width: 175px;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.team-member img:hover {
+    transform: scale(1.1);
+}
+
+.team-member h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2em;
+    margin-top: 15px;
+    color: #333;
+}
+
+.team-member p {
+    font-size: 1em;
+    color: #666;
+}

@@ -1,0 +1,159 @@
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+<app-navbar-home/>
+    <link rel="stylesheet" href="home.component.css" />
+<div class="container mt-4">
+    <main>        
+        <!-- Sección de introducción -->
+        <section class="hero">
+            <img src="icons/ConnectOrange.jpg" alt="Connect">
+            <div class="hero-content">
+                <h1>Únete a la Red de Innovadores en Tecnología</h1>
+                <p>"Descubre eventos que impulsarán tu carrera y conecta con líderes de la industria.
+                    ConnecTech es una solución revolucionaria en el ámbito de la organización de eventos tecnológicos, diseñada para abordar los desafíos críticos que enfrentan los profesionales y entusiastas de la tecnología al buscar oportunidades de networking y aprendizaje."</p>
+                <a href="#" class="btn-explorar">Explorar Eventos</a>
+            </div>
+        </section>
+
+        <!-- Sección de nosotros -->
+        <section class="about-us">
+            <div class="head-about">
+            <h2 class="titulo">Sobre nosotros</h2>
+            </div>
+            
+            <div class="container">
+            
+            <div class="mision-content">
+                <div class="mision-text">
+                <h2>Nuestra misión</h2>
+                <p>Transformar la experiencia de los eventos tecnológicos, facilitando conexiones significativas y accesibles para todos los miembros de la comunidad tecnológica.</p>
+                </div>
+                <div class="mision-image">
+                <img src="icons/mision.jpeg" alt="Imagen de Misión">
+                </div>
+            </div>
+            
+            <div class="vision-content">
+                <div class="vision-image">
+                <img src="icons/vision.jpeg" alt="Imagen de Visión">
+                </div>
+                <div class="vision-text">
+                <h2>Nuestra visión</h2>
+                <p>Construir un ecosistema tecnológico global donde cada individuo pueda acceder equitativamente a oportunidades de aprendizaje y networking, impulsando así el avance continuo de la tecnología y la sociedad.</p>
+                </div>
+            </div>
+            
+            <div class="story-content">
+                <h2>Nuestra historia</h2>
+                <div class="story-text">
+                <p>Somos un grupo de estudiantes apasionados por la tecnología que, en 2024, decidimos crear una plataforma para organizar eventos que conecten a jóvenes profesionales y entusiastas del sector. Desde entonces, hemos trabajado juntos para ofrecer talleres y conferencias que fomenten el aprendizaje y el intercambio de ideas. Nuestro objetivo es crear un espacio donde todos puedan crecer y compartir su pasión por la tecnología.</p>
+                </div>
+                <div class="story-image">
+                <img src="icons/story.avif" alt="Imagen de Historia">
+                </div>
+            </div>
+            
+            </div>
+        </section>
+
+
+
+        
+        <!-- Sección de características -->
+        <section class="features">
+            <h2>Características Clave</h2>
+            <div class="feature-list">
+                <div class="feature">
+                    <img src="icons/AccesoExclusivo.jpg" alt="Acceso Exclusivo">
+                    <p>Acceso a Exclusivos eventos</p>
+                </div>
+                <div class="feature">
+                    <img src="icons/OportunidadesLaborales.jpg" alt="Oportunidades laborales">
+                    <p>Oportunidades de desarrollo laboral</p>
+                </div>
+                <div class="feature">
+                    <img src="icons/CrecimientoPersonal.jpg" alt="Crecimiento profesional">
+                    <p>Crecimiento académico y profesional</p>
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- Sección de testimonios -->
+        <!-- Aquí va la sección de testimonios -->
+
+        <!-- Sección de preguntas frecuentes -->
+        <section id="faq">
+            <div class="header-container">
+                <h2> 👋 ¿En qué podemos ayudarte?</h2>
+    
+                <!-- Barra de búsqueda -->
+                <nav>
+                    <input type="text" placeholder="FAQ..." class="faq-search">
+                </nav>
+            </div>
+    
+            <!-- Sección de los cuadros -->
+            <div class="faq-options-container"> 
+                <div class="faq-option">
+                    <img src="icons/network1.png" alt="Getting Started Icon">
+                    <h3>Getting Started</h3>
+                </div>
+    
+                <div class="faq-option">
+                    <img src="icons/network2.jpg" alt="Oyster Resources Icon">
+                    <h3>Recursos de ConnecTech</h3>
+                </div>
+    
+                <div class="faq-option">
+                    <img src="icons/network3.jpg" alt="Submit a Request Icon">
+                    <h3>Crear un evento</h3>
+                </div>
+    
+                <div class="faq-option">
+                    <img src="icons/network4.png" alt="Product Updates Icon">
+                    <h3>Sobre eventos online</h3>
+                </div>
+            </div>
+            <div class="faq-questions-container">
+                <div *ngFor="let faq of faqs" class="faq-item">
+                    <h5 (click)="toggleAnswer(faq)">{{ faq.question }}</h5>
+                    <p *ngIf="faq.showAnswer">{{ faq.answer }}</p>
+                  </div>
+            </div>
+        </section>
+        
+        <!-- Sección de equipo -->
+        <div class="team-section">
+            <h3>Conoce a Nuestro Equipo</h3>
+            <div class="team-container">
+                <div class="team-member">
+                    <img src="icons/img3.png" alt="Miembro del equipo">
+                    <h3>Dayana Gomez</h3>
+                    <p>Fundador</p>
+                </div>
+                <div class="team-member">
+                    <img src="icons/img1.png" alt="Miembro del equipo">
+                    <h3>Ximena Chavarria</h3>
+                    <p>Fundador</p>
+                </div>
+                <div class="team-member">
+                    <img src="icons/img2.png" alt="Miembro del equipo">
+                    <h3>Joaquin Arevalo</h3>
+                    <p>Fundador</p>
+                </div>
+                <div class="team-member">
+                    <img src="icons/img5.png" alt="Miembro del equipo">
+                    <h3>Nicole Vasquez</h3>
+                    <p>Fundador</p>
+                </div>
+                <div class="team-member">
+                    <img src="icons/img4.png" alt="Miembro del equipo">
+                    <h3>Shirley Huaringa</h3>
+                    <p>Fundador</p>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+</div>
+<app-footer/>

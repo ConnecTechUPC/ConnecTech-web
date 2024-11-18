@@ -1,0 +1,94 @@
+/* Estilo del footer */
+footer {
+    padding: 40px; /* Aumentar el padding para más espacio */
+    background-color: #3B82F6; /* Color de fondo */
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias filas */
+    justify-content: space-around; /* Espaciado uniforme entre elementos */
+    align-items: flex-start; /* Alinear al inicio verticalmente */
+    color: #fff; /* Cambiar el color del texto a blanco */
+}
+
+/* Estilo para el logo */
+.footer-logo {
+    max-width: 120px; /* Tamaño del logo */
+    height: auto; /* Mantiene la proporción */
+    margin-bottom: 20px; /* Espacio debajo del logo */
+}
+
+/* Estilo para la sección de social media */
+.social-media {
+    display: flex;
+    flex-direction: column; /* Cambiar a columna */
+    align-items: center; /* Centrar elementos */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+.social-media p {
+    margin-bottom: 10px; /* Espacio debajo del texto */
+    font-size: 1.1rem; /* Aumentar el tamaño de la fuente */
+}
+
+/* Enlaces del footer */
+footer a {
+    text-decoration: none;
+    color: #FACC15; /* Color de los enlaces */
+    margin: 5px 0; /* Espaciado entre enlaces */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Subrayar al pasar el mouse */
+}
+
+/* Estilo para las imágenes de redes sociales */
+footer img {
+    max-width: 40px; /* Ajustar el tamaño de las imágenes */
+    margin: 5px; /* Espaciado entre las imágenes */
+}
+
+/* Estilo para la sección de suscripción */
+.subscribe {
+    background-color: #F97316; /* Color de fondo de la sección de suscripción */
+    padding: 20px;
+    border-radius: 8px; /* Bordes redondeados */
+    text-align: center; /* Centrar el texto */
+    width: 100%; /* Ancho completo */
+    max-width: 400px; /* Máximo ancho */
+    margin-top: 20px; /* Espacio superior */
+}
+
+.subscribe h3 {
+    margin-bottom: 10px; /* Espacio debajo del título */
+    font-size: 1.5rem; /* Aumentar tamaño de fuente */
+}
+
+.subscribe p {
+    margin-bottom: 15px; /* Espacio debajo del párrafo */
+}
+
+.subscribe input[type="email"] {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espaciado interno */
+    margin-bottom: 10px; /* Espacio debajo del campo de entrada */
+    border: 1px solid #ccc; /* Borde de entrada */
+    border-radius: 4px; /* Bordes redondeados */
+}
+
+.privacy-policy {
+    text-align: left; /* Alinear el texto a la izquierda */
+    margin-bottom: 10px; /* Espacio debajo de la casilla de verificación */
+}
+
+.subscribe button {
+    padding: 10px 20px; /* Espaciado interno */
+    background-color: #FACC15; /* Color del botón */
+    color: #000; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+.subscribe button:hover {
+    background-color: #1D4ED8; /* Color al pasar el mouse */
+}

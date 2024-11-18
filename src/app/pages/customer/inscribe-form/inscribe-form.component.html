@@ -1,0 +1,46 @@
+<div class="welcome-message">
+    <h1>¡Bienvenido a la Inscripción!</h1>
+    <p>Por favor, complete los datos a continuación para realizar el pago y asegurar su inscripción al evento.</p>
+  </div>
+  
+  <form [formGroup]="inscribeForm" (ngSubmit)="onSubmit()" class="payment-form">
+    <div class="form-field">
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Nombre del Titular</mat-label>
+        <input matInput id="cardName" formControlName="cardName" type="text" />
+        <mat-error *ngIf="controlHasError('cardName', 'required')">El nombre es requerido</mat-error>
+      </mat-form-field>
+    </div>
+    
+    <div class="form-field">
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Número de Tarjeta</mat-label>
+        <input matInput id="cardNumber" formControlName="cardNumber" type="text" />
+        <mat-error *ngIf="controlHasError('cardNumber', 'required')">El número de tarjeta es requerido</mat-error>
+        <mat-error *ngIf="controlHasError('cardNumber', 'pattern')">Número de tarjeta inválido</mat-error>
+      </mat-form-field>
+    </div>
+    
+    <div class="form-field">
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Fecha de Vencimiento</mat-label>
+        <input matInput id="expiryDate" formControlName="expiryDate" type="text" placeholder="MM/AA" />
+        <mat-error *ngIf="controlHasError('expiryDate', 'required')">La fecha de vencimiento es requerida</mat-error>
+        <mat-error *ngIf="controlHasError('expiryDate', 'pattern')">Formato de fecha inválido</mat-error>
+      </mat-form-field>
+    </div>
+    
+    <div class="form-field">
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>CVV</mat-label>
+        <input matInput id="cvv" formControlName="cvv" type="text" />
+        <mat-error *ngIf="controlHasError('cvv', 'required')">El CVV es requerido</mat-error>
+        <mat-error *ngIf="controlHasError('cvv', 'pattern')">CVV inválido</mat-error>
+      </mat-form-field>
+    </div>
+    
+    <div class="submit-button">
+      <button mat-raised-button color="primary" type="submit">Pagar</button>
+    </div>
+  </form>
+  

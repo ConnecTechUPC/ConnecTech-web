@@ -1,0 +1,76 @@
+/* Container styling for the event form */
+.event-form-container {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 32px;
+    background-color: #FFFAE6; /* Soft yellow background */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(255, 193, 7, 0.3); /* Light orange shadow */
+    color: #03A9F4;
+}
+
+/* Centered header with a bold, vibrant look */
+h2 {
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #FF9800; /* Orange for title */
+    margin-bottom: 25px;
+}
+
+/* Form field styling with consistent spacing */
+mat-card {
+    background-color: transparent; /* Matches container background */
+    box-shadow: none;
+}
+
+mat-form-field.form-field {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+mat-form-field .mat-input-element {
+    font-size: 1em;
+    padding: 10px;
+    color: #ffffff;
+}
+
+/* Placeholder text style in inputs */
+::placeholder {
+    color: #03A9F4;
+}
+
+/* Button group styling */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+/* Primary (Guardar) button styling */
+button[color="primary"] {
+    background-color: #03A9F4; /* Vibrant blue */
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+button[color="primary"]:hover {
+    background-color: #0288D1; /* Darker blue on hover */
+}
+
+/* Cancel button styling */
+button[color="warn"] {
+    background-color: #FFC107; /* Bright yellow for cancel button */
+    color: #333;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+button[color="warn"]:hover {
+    background-color: #FFA000; /* Darker yellow on hover */
+}
