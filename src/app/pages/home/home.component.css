@@ -96,6 +96,17 @@
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
 }
 
+.video{
+    display: grid;
+    place-items: center;
+}
+.video h2 {
+    font-size: 25px;
+    color: #FACC15;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: color 0.3s ease;
+}
 .feature img {
     max-width: 100%; /* Asegura que la imagen no se salga del recuadro */
     border-radius: 5px; /* Bordes redondeados para las imágenes */
