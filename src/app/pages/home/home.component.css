@@ -90,9 +90,15 @@
 }
 
 .video{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    place-items: center;
+}
+.video h2 {
+    font-size: 25px;
+    color: #FACC15;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: color 0.3s ease;
 }
 .feature img {
     max-width: 100%; /* Asegura que la imagen no se salga del recuadro */
