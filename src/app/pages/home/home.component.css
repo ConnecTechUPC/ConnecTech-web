@@ -89,6 +89,11 @@
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
 }
 
+.video{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .feature img {
     max-width: 100%; /* Asegura que la imagen no se salga del recuadro */
     border-radius: 5px; /* Bordes redondeados para las imágenes */
